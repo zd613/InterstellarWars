@@ -40,7 +40,6 @@ public class Planet : MonoBehaviour
                 break;
             }
         }
-        print(currentNumberOfShips);
     }
 
 }
