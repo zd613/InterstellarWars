@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Planet : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class Planet : MonoBehaviour
     public int maxShips = 10;//船がこの星にいられる最大数
     public int increasementPerSecond;//1秒当たりに増える船の数
 
+    //
+    public Text numText;
 
     public int currentNumberOfShips = 0;//現在の船数
 
@@ -34,6 +37,8 @@ public class Planet : MonoBehaviour
                     if (currentNumberOfShips < maxShips)
                     {
                         currentNumberOfShips += 1;
+                        if (numText != null)
+                            numText.text = currentNumberOfShips.ToString();
                     }
                     continue;
                 }
